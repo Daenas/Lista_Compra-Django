@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="{% static 'css\estilo.css' %}" />
+  </head>
+  <body>
+    <img src="{% static 'images/mercado.jpg' %}" />
+    <table>
+      <thead>
+        <tr>
+          <th><h3>Produto</h3></th>
+          <th><h3>Quantidade</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for produto in produtos %}
+        <tr>
+          <td>{{produto.nome}}</td>
+          <td>{{produto.quantidade}}</td>
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
