@@ -1,0 +1,1 @@
+web: gunicord lista.wsgi --log-file -
