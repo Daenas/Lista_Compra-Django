@@ -1,1 +1,1 @@
-web: gunicord lista.wsgi --log-file -
+web: gunicord lista.wsgi
