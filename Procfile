@@ -1,1 +1,1 @@
-web: gunicord lista.wsgi
+web: gunicord lista:app
