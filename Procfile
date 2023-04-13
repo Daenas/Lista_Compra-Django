@@ -1,1 +1,1 @@
-web: gunicorn lista.wsgi --log-file -
+web: gunicorn 'lista.wsgi
