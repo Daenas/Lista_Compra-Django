@@ -35,6 +35,9 @@ img {
 }
 
 @media screen and (max-width: 600px){
+  body {
+    background-color: #ffffff;
+  }
   img{
     width: 600px;
     height: 400px;
