@@ -51,7 +51,7 @@ img {
 
 .formulario input[type="text"] {
   display: block;
-  width: 100%;
+  width: 99%;
   height: 100px;
   padding: 10px;
   border: 1px solid #ccc;

@@ -13,10 +13,8 @@
 
     <div class="formulario">
       <form action = "{% url 'processa_formulario' %}" method="POST"> {% csrf_token %}
-        <label">Produto:</label>
         <input type = "text" placeholder="Produto..." name = "produto">
         <br>
-        <label">Quantidade:</label>
         <input type = "text" placeholder="Quantidade..." name = "quantidade">
         <br>
         <input type = "submit" value = "Enviar">
