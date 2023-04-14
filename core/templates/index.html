@@ -8,11 +8,29 @@
   </head>
   <body>
     <img src="{% static 'images/mercado.jpg' %}" />
+
+
+
+    <div class="formulario">
+      <form action = "{% url 'processa_formulario' %}" method="POST"> {% csrf_token %}
+        <label">Produto:</label>
+        <input type = "text" placeholder="Produto..." name = "produto">
+        <br>
+        <label">Quantidade:</label>
+        <input type = "text" placeholder="Quantidade..." name = "quantidade">
+        <br>
+        <input type = "submit" value = "Enviar">
+      </form>
+    </div>
+
+
+
     <table>
       <thead>
         <tr>
           <th><h3>Produto</h3></th>
           <th><h3>Quantidade</h3></th>
+          <th><h3></h3></th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +38,7 @@
         <tr>
           <td>{{produto.nome}}</td>
           <td>{{produto.quantidade}}</td>
+          <td><h1>X</h1></td>
           {% endfor %}
         </tr>
       </tbody>
