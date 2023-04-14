@@ -18,7 +18,7 @@ table {
 th, td {
   font-weight: 500;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: larger;
+  font-size: 50px;
   text-align: left;
   padding: 4px;
   border-bottom: 0px;
@@ -37,6 +37,8 @@ tr:nth-child(even) {
 }
 
 img {
+  width: 80%;
+  height: auto;
   padding: 8px;
   border-radius: 15%;
   display: flex;
@@ -47,5 +49,5 @@ img {
   body{
     background-color: red;
   }
-  
+
 }
