@@ -120,3 +120,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #Criado no curso
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGOUT_REDIRECT_URL = 'index'
+
+CSRF_TRUSTED_ORIGINS = ['https://daenam.up.railway.app/','https://*.127.0.0.1']
