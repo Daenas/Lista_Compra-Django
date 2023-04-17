@@ -17,4 +17,9 @@ def processa_formulario(request):
     produto = request.POST.get('produto')
     quantidade = request.POST.get('quantidade')
 
-    return HttpResponse(f'{quantidade} {produto}')
+    context = {
+        'produto' : produto,
+        'quantidade' : quantidade
+    }
+
+    return render(request, 'processa_formulario.html', context)
