@@ -121,4 +121,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGOUT_REDIRECT_URL = 'index'
 
-CSRF_TRUSTED_ORIGINS = ['https://daenam.up.railway.app/','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://daenam.up.railway.app','https://*.127.0.0.1', 'http://daenam.up.railway.app']
