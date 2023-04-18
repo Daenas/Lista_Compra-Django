@@ -10,11 +10,6 @@ body{
   color: #ffffff;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
 th, td {
   font-weight: 500;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -75,4 +70,22 @@ img {
 
 .formulario{
   text-align: center;
+}
+
+.botao{
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.tabela table{
+    width: 100%;
 }

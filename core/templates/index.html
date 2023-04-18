@@ -8,15 +8,12 @@
   </head>
   <body>
     <img src="{% static 'images/mercado.jpg' %}" />
-
     <div class="formulario">
-      <form action="{% url 'processa_formulario' %}" method="POST">
+      <form action="{% url 'index' %}" method="post" autocomplete="off" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="text" placeholder="Produto..." name="produto" />
-        <br />
-        <input type="text" placeholder="Quantidade..." name="quantidade" />
-        <br />
-        <input type="submit" value="Enviar" />
+        {% bootstrap_form form %}
+        <button type="submit" class = "botao">Adicionar</button>
+        <br>
       </form>
     </div>
 
@@ -40,6 +37,6 @@
         </tbody>
       </table>
     </div>
-    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    {% bootstrap_javascript jquery='full' %}
   </body>
 </html>
