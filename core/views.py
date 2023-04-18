@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Produto
-from django.http import HttpResponse
+from .forms import ProdutoModelForm
 
 def index(request):
     produtos = Produto.objects.all()
@@ -14,12 +14,12 @@ def index(request):
     return render(request, 'index.html', context)
 
 def processa_formulario(request):
-    produto = request.POST.get('produto')
-    quantidade = request.POST.get('quantidade')
+    Nome = request.POST.get('produto')
+    Quantidade = request.POST.get('quantidade')
 
     context = {
-        'produto' : produto,
-        'quantidade' : quantidade
+        'Nome' : Nome,
+        'Quantidade' : Quantidade
     }
 
     return render(request, 'processa_formulario.html', context)
