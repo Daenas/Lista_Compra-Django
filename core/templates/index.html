@@ -9,11 +9,15 @@
   <body>
     <img src="{% static 'images/mercado.jpg' %}" />
     <div class="formulario">
-      <form action="{% url 'index' %}" method="post" autocomplete="off" enctype="multipart/form-data">
-        {% csrf_token %}
-        {% bootstrap_form form %}
-        <button type="submit" class = "botao">Adicionar</button>
-        <br>
+      <form
+        action="{% url 'index' %}"
+        method="post"
+        autocomplete="off"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %} {% bootstrap_form form %}
+        <button type="submit" class="botao">Adicionar</button>
+        <br />
       </form>
     </div>
 
@@ -31,7 +35,11 @@
           <tr>
             <td>{{produto.Nome}}</td>
             <td>{{produto.Quantidade}}</td>
-            <td><h1>X</h1></td>
+            <td>
+              {% buttons %}
+              <a href="{% url 'delete-event' produto.id%}" class = "botao">X</a>
+              {% endbuttons %}
+            </td>
             {% endfor %}
           </tr>
         </tbody>
